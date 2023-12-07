@@ -1,0 +1,130 @@
+{
+  "expo": {
+    "name": "UpLinkMarket",
+    "slug": "uplinkmarket",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          },
+          "android": {
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33,
+            "buildToolsVersion": "30.0.2",
+            "kotlinVersion": "1.7.10"
+          }
+        }
+      ],
+      "./react-native-maps-plugin",
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "",
+          "enableGooglePay": false
+        }
+      ],
+      [
+        "expo-document-picker",
+        {
+          "appleTeamId": "MUH87G87",
+          "iCloudContainerEnvironment": "Production"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon96x96.png",
+          "color": "#ffffff",
+          "mode": "production"
+        }
+      ],
+      "expo-localization"
+    ],
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#ff8f9d",
+      "resizeMode": "cover"
+    },
+    "notification": {
+      "icon": "./assets/icon96x96.png",
+      "color": "#ffffff",
+      "iosDisplayInForeground": true,
+      "androidMode": "default"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bitcode": "Debug",
+      "usesAppleSignIn": true,
+      "supportsTablet": true,
+      "bundleIdentifier": "com.uplinkmarket",
+      "buildNumber": "1",
+      "usesIcloudStorage": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "UpLinkMarket uses the camera to capture and upload user profile image and Listing Image to the server.",
+        "NSPhotoLibraryUsageDescription": "UpLinkMarket needs access to the photo library to select and upload user profile image and Listing Image to the server.",
+        "NSPhotoLibraryAddUsageDescription": "UpLinkMarket needs access to the photo library to select and upload user profile image and Listing Image to the server.",
+        "NSLocationWhenInUseUsageDescription": "UpLinkMarket usages device location on listing information, Listing search Data and User information.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "UpLinkMarket usages device location on listing information, Listing search Data and User information.",
+        "NSLocationAlwaysUsageDescription": "UpLinkMarket uses device location on listing information, Listing search Data and User information.",
+        "NSMicrophoneUsageDescription": "UpLinkMarket uses your microphone while taking video of your product for uploading in listing information.",
+        "CFBundleAllowMixedLocalizations": true,
+        "UIBackgroundModes": [
+          "remote-notification"
+        ]
+      },
+      "config": {
+        "googleMapsApiKey": "h76t57h8u6h8756hn5nn-ux2m6A",
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.uplinkmarket",
+      "config": {
+        "googleMaps": {
+          "apiKey": "h76t57h8u6h8756hn5nn-ux2m6A"
+        }
+      },
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#fff"
+      },
+      "permissions": [
+        "CAMERA",
+        "CAMERA_ROLL",
+        "MEDIA_LIBRARY",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECORD_AUDIO",
+        "READ_PHONE_STATE",
+        "READ_CONTACTS",
+        "LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "android.permission.INTERNET",
+        "POST_NOTIFICATIONS"
+      ],
+      "versionCode": 10000
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "scheme": "uplinkmarket",
+    "extra": {
+      "eas": {
+        "projectId": "eb4e60f6-a444-49fa-a37d-92caed493bab"
+      }
+    }
+  }
+}
